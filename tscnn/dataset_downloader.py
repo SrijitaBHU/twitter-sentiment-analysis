@@ -9,10 +9,10 @@ if not os.path.exists(DATASET_FOLDER):
     os.mkdir(DATASET_FOLDER)
 zip_file = ''.join([DATASET_FOLDER, 'sentiment-dataset.csv.zip'])
 
-print 'Downloading dataset...'
+print ("Downloading dataset...")
 retriever = urllib.URLopener()
 retriever.retrieve(URL, zip_file)
-print "Done."
+print ("Done.")
 
 print 'Extracting data...'
 z = zipfile.ZipFile(zip_file)
@@ -22,4 +22,4 @@ old_file = ''.join([DATASET_FOLDER, 'Sentiment Analysis Dataset.csv'])
 new_file = ''.join([DATASET_FOLDER, 'sentiment-dataset.csv'])
 os.rename(old_file, new_file)
 os.remove(zip_file)
-print 'Done. Exiting...'
+print ("Done. Exiting...")
